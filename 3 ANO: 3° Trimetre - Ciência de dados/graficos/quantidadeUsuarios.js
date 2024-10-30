@@ -1,35 +1,35 @@
 import { getCSS, tickConfig } from "./common.js"
 
-async function quantidadeUsuarios() {
+async function quantidadeUsuariosPorRede() {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
-const res = await fetch(url)
-const dados = await res.json()
-const nomeDasRedes = object.keys(dados)
-const quantidadeUsuarios = object.values(dados)
+    const res = await fetch(url)
+    const dados = await res.json()
+    const nomeDasRedes = Object.keys(dados)
+    const quantidadeDeUsuarios = Object.values(dados)
 
-const data = [
-    {'--primary-color'
-        x: nomeDasRedes, 
-        y: quantidadedeUsuarios,
-        type: 'bar',
-        marker: {
-            color: getCSS('--primary-color')
+    const data = [
+        {
+            x: nomeDasRedes, 
+            y: quantidadeDeUsuarios, 
+            type: 'bar',
+            marker: {
+                color: getCSS('--primary-color')
+            }
         }
-    }
-]
+    ]
 
-const layout = {
-    plot_bgcolor: getCSS ('--bg-color'),
-    paper_bgcolor: getCSS('--bg-color'),
-    title: {
-        text:'Redes sociais com mais usuários no mundo',
-        x: 0,
-        font: {
-            color getCSS ('--primary-color'),
-            family: getCSS('--fonte'),
-            size: 30
-        }
-    },
+    const laytout = {
+        plot_bgcolor: getCSS('--bg-color'),
+        paper_bgcolor: getCSS('--bg-color'),
+        title: {
+            text: 'Redes sociais com mais usuários',
+            x: 0,
+            font: {
+                color: getCSS('--primary-color'),
+                size: 30,
+                font: getCSS('--font')
+            }
+        },
     xaxis: {
         tickfont: tickConfig, 
         title: {
