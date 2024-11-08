@@ -30,32 +30,30 @@ async function quantidadeUsuariosPorRede() {
                 font: getCSS('--font')
             }
         },
-    xaxis: {
-        tickfont: tickConfig, 
-        title: {
-            text: 'nome das redes sociais',
-            font: {
-                color: getCSS('--secondary-color')
+        xaxis: {
+            tickfont: tickConfig,
+            title: {
+                text: 'Nome das redes',
+                font: {
+                    color: getCSS('--secondary-color')
+                }
             }
-        }
-    },
-    yaxis: {
-        tickfont: tickConfig, 
-        title: {
-            text: 'bilhões de usuários ativos',
-            font: {
-                color: getCSS('--secondary-color')
+        },
+        yaxis: {
+            tickfont: tickConfig,
+            title: {
+                text: 'Bilhões de usuários ativos',
+                font: {
+                    color: getCSS('--secondary-color')
+                }
             }
         }
     }
-}
 
     const grafico = document.createElement('div')
     grafico.className = 'grafico'
     document.getElementById('graficos-container').appendChild(grafico)
-    Plotly.newPlot(grafico, data, layout)
-
-
+    Plotly.newPlot(grafico, data, laytout)
 }
 
-quantidadeUsuarios()
+quantidadeUsuariosPorRede()
